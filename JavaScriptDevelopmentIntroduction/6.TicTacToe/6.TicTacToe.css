@@ -1,0 +1,34 @@
+html{
+    background: rgb(210, 210, 210);
+}
+
+body{
+    text-align: center;
+}
+
+#gameField{
+    text-align: center;
+    margin: 5% auto;
+}
+
+canvas{
+    margin: 0.2%;
+    -webkit-animation:canvasAnimation 5s;
+    border-radius: 5px;
+    border: 1px solid rgba(254, 109, 13, 0.7);
+    background: -o-linear-gradient(bottom, #D2D2D2, #21CEA0, #D2D2D2);
+    background: -moz-linear-gradient(bottom, #D2D2D2, #21CEA0, #D2D2D2);
+    background: -webkit-linear-gradient(bottom, #D2D2D2, #21CEA0, #D2D2D2);
+    background: -ms-linear-gradient(bottom, #D2D2D2, #21CEA0, #D2D2D2);
+    background: linear-gradient(to bottom, #D2D2D2, #21CEA0, #D2D2D2);
+}
+
+@-webkit-keyframes canvasAnimation{
+    0% {
+        -webkit-transform:scale(2.1);
+    }
+    50% {
+        margin: 5%;
+        -webkit-transform:scale(2.1) rotate(360deg);
+    }
+}
