@@ -1,5 +1,5 @@
 function replaceSpaces(value) {
-    var regExp = new RegExp(" ", 'g');
+    var regExp = new RegExp('\\s', 'g');
     var output = value.replace(regExp, '');
     console.log(output);
 }

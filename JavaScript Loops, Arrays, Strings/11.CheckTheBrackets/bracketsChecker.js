@@ -5,16 +5,13 @@ function checkBrackets(value) {
         if (value[i] == '(') {
             bracketsCount += 1;
         }
-
         if (value[i] == ')') {
         	bracketsCount -= 1;
         }
-
         if (bracketsCount < 0) {
         	break;
         }
     }
-
     if (bracketsCount == 0) {
         console.log('correct');
     } else {

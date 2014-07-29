@@ -25,7 +25,7 @@ function findCardFrequency(value) {
     var quota;
     for(card in cardsOccurrenceCount){
         quota = ((cardsOccurrenceCount[card] / total) * 100).toFixed(2);
-        console.log(card + ' -> ' + quota + ' %');
+        console.log(card + ' -> ' + quota + '%');
     }
 }
 

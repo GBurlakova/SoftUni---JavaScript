@@ -14,7 +14,6 @@ function findMaxSequence(value) {
             currentSequence[0] = value[i];
         }
     }
-
     if (currentSequence.length > maxSequence.length) {
         maxSequence = currentSequence;
     }

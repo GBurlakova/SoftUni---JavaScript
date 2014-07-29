@@ -27,8 +27,8 @@ function randomCase(value){
     return chars.join('');
 }
 function fixCasing(value) {
-    var words = value.split(/[<>/]+/).clean('');
-    var output = words.join(', ');
+    var words = value.split(/[<>/]+/).clean('').map(function(word){return word.trim()});
+    var output = words.join(' ');
     var toCase = 0;
     var tagOpened = false;
     for (var i = 0; i < words.length; i++) {
@@ -56,7 +56,15 @@ function fixCasing(value) {
 
     }
     output = words.clean('mixcase').clean('upcase').clean('lowcase').join(' ');
-    console.log(output);
+    output = output.split(' ');
+    for (var ch = 0; ch < output.length; ch++) {
+        if (output[ch] == '.') {
+        	output[ch - 1] += '.';
+            output[ch] = '';
+        }
+    }
+    output = output.clean('');
+    console.log(output.join(' '));
 }
 
 fixCasing('We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don\'t</mixcase> have <lowcase>anything</lowcase> else.');
