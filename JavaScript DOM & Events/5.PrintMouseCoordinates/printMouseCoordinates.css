@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+
+div{
+    width: 150px;
+    height: 120px;
+    color: rgb(27, 118, 254);
+    background: rgb(210, 210, 210);
+    margin: 50px auto;
+    outline: none;
+    box-shadow: 0px 0px 4px 4px #15283c;
+    font-size: 250%;
+    transition: 0.3s ease background;
+    text-align: center;
+}
